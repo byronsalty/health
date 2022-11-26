@@ -20,7 +20,7 @@ defmodule Health.MixProject do
   def application do
     [
       mod: {Health.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :inets, :runtime_tools]
     ]
   end
 

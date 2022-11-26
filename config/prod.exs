@@ -14,6 +14,12 @@ import Config
 # Do not print debug messages in production
 config :logger, level: :info
 
+config :gigalixir_getting_started, GigalixirGettingStartedWeb.Endpoint,
+  http: [port: {:system, 4000}], # Possibly not needed, but doesn't hurt
+  url: [host: "health.gigalixirapp.com", port: 443],
+  secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE"),
+  server: true
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
