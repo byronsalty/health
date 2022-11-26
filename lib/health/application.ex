@@ -9,7 +9,7 @@ defmodule Health.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      HealthWeb.Telemetry,
+      # HealthWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: Health.PubSub},
       # Start the Endpoint (http/https)

@@ -1,1 +1,12 @@
-This is a form.
+<%= form_for @conn, "/form", fn f -> %>
+<ol>
+<li>
+  Have you breastfed a full-term, healthy baby? <%= radio_button f, :breastfed, "Y" %> Y <%= radio_button f, :breastfed, "N" %> N
+</li>
+<li>
+  Was your baby delivered at or after 37 weeks? <%= radio_button f, :fullterm, value: true %> Y <%= radio_button f, :fullterm, value: false %> N
+</li>
+</ol>
+Submit to see if you qualify: <br/>
+  <%= submit "Submit" %>
+<% end %>
