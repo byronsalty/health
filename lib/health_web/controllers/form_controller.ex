@@ -2,7 +2,7 @@ defmodule HealthWeb.FormController do
   use HealthWeb, :controller
 
   def form(conn, _params) do
-    render(conn, "index.html")
+    render(conn, "index.html", title: "Sample Form")
   end
   def submit(conn, _params) do
     pass = (conn.params["breastfed"] == "Y")
